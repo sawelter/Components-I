@@ -40,7 +40,6 @@ function menuMaker(menuItems) {                 // Step 1
   const list = document.createElement("ul")
   menu.appendChild(list);
 
-  // console.log(menu);
 
   menuItems.forEach((element) => {              // Step 2
     let listItem = document.createElement("li");
@@ -61,5 +60,4 @@ function menuMaker(menuItems) {                 // Step 1
 }
 
 const header = document.querySelector(".header"); // Step 6
-console.log(menuMaker(menuItems));
 header.appendChild(menuMaker(menuItems));
