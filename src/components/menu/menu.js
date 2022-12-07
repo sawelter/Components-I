@@ -49,19 +49,30 @@ function menuMaker(menuItems) {                 // Step 1
   });
 
   const menuButton = document.querySelector(".menu-button"); // Step 3
-  menuButton.addEventListener('click', () => {
-    if(menuButton.classList.contains("menu--open")) {
-      menuButton.classList.remove("menu--open");
-    } else {
-      menuButton.classList.add("menu--open");
-    }
-  });
+
+
 
   // console.log(menu);
 
-  return menu;
+  return menu;                                      // Step 5
 }
 
-const header = document.querySelector(".header");
+const header = document.querySelector(".header"); // Step 6
 console.log(menuMaker(menuItems));
 header.appendChild(menuMaker(menuItems));
+
+const myMenu = document.querySelector("div.menu");
+console.log(myMenu);
+myMenu.addEventListener('click', () => {            // Step 4
+  // if(myMenu.classList.contains("menu--open")) {
+    // myMenu.classList.remove("menu--open");
+    console.log("remove")
+  // } else {
+    myMenu.classList.add("menu--open");
+  //   console.log("add")
+  // }
+});
+
+
+
+// Dec 6 - 6:54pm. menu click is not adding menu--open to the div.
